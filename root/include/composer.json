@@ -2,7 +2,7 @@
     "name": "<%= S(name).slugify().value() %>",
     "description": "<%= description %>",
     "authors": [{
-      "name": "<%= name %>"
+      "name": "<%= author %>"
     }],
     "type": "project",
     "license": "proprietary",
