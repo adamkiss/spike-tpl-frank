@@ -8,6 +8,7 @@ module.exports = frank({
 	ignore: ['include/**', 'logs/**'],
 	plugins: [caddy],
 	reshape: frank.reshape({
+		root: __dirname,
 		locals: ctx => Object.assign(locals, {
 			page: frank.page(ctx)
 		})

@@ -1,6 +1,6 @@
 # Spike - Frank Template
 
-My template for [spike](https://github.com/static-dev/spike). For use with legacy servers and PHP. It'll probably be of no use to you, other than inspiration.
+My template for [spike](https://github.com/static-dev/spike). For use with legacy servers and PHP. This is a customised fork of [spike base template](https://github.com/static-dev/spike-tpl-base) and it'll probably be of no use to you, other than inspiration. 
 
 ## Includes
 

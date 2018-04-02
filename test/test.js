@@ -10,18 +10,18 @@ const {exec} = require('child_process')
 
 const tplTestPath = path.join(__dirname, 'example')
 
-// test.afterEach((t) => rimraf(tplTestPath))
+test.afterEach((t) => rimraf(tplTestPath))
 
-test.skip('compile test', (t) => {
+test.skip.cb('compile test', t => {
   const project = new Spike({ root: tplTestPath, env: 'production' })
   project.on('error', console.error)
   project.on('warning', console.error)
-  project.on('compile', () => console.log('done!'))
+  project.on('compile', () => t.end())
   project.compile()
 })
 
 test('initializes with sprout, compiles with spike', t => {
-  const tplName = 'spike-tpl-base-test'
+  const tplName = 'spike-tpl-frank-test'
   const locals = { name: 'Website.com 2020', description: 'Amazeballs website', author: 'Doge', server: 'Googol.com' }
   const sprout = new Sprout(tmpdir())
 
@@ -47,8 +47,8 @@ test('initializes with sprout, compiles with spike', t => {
     })
 })
 
-test.only('compiles with production setting', t => {
-  const tplName = 'spike-tpl-base-production-test'
+test('compiles with production setting', t => {
+  const tplName = 'spike-tpl-frank-production-test'
   const locals = { name: 'Website.com 2020', description: 'Amazeballs website', author: 'Doge', server: 'Googol.com' }
   const sprout = new Sprout(tmpdir())
 
