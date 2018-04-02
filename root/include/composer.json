@@ -1,0 +1,10 @@
+{
+    "name": "<%= S(name).slugify().value() %>",
+    "description": "<%= description %>",
+    "authors": [{
+      "name": "<%= name %>"
+    }],
+    "type": "project",
+    "license": "proprietary",
+    "require": {}
+}

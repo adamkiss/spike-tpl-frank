@@ -1,0 +1,4 @@
+extends(src='partials/layout-main.sgr')
+	block(name='title'): title Welcome to Frank
+	block(name='content')
+		h1 Hello world

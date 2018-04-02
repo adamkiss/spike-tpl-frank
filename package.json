@@ -1,0 +1,33 @@
+{
+  "name": "spike-tpl-frank",
+  "version": "0.1.0",
+  "description": "My personal template for Spike.",
+  "main": "init.js",
+  "devDependencies": {
+    "ava": "^0.20.0",
+    "os-tmpdir": "^1.0.1",
+    "rmfr": "^1.0.2",
+    "sprout": "^1.2.1",
+    "when": "^3.7.7"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamkiss/spike-tpl-frank.git"
+  },
+  "keywords": [
+    "spike",
+    "spike-template"
+  ],
+  "author": "Adam Kiss <iamadamkiss+npm@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adamkiss/spike-tpl-frank/issues"
+  },
+  "homepage": "https://github.com/adamkiss/spike-tpl-frank#readme",
+  "dependencies": {
+    "spike-core": "github:adamkiss/spike-core"
+  }
+}
