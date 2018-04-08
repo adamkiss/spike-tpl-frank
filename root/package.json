@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "<%= author %>",
   "dependencies": {
-    "@adamkiss/spike-frank": "~0.4.4",
+    "@adamkiss/spike-frank": "~0.4.8",
     "@adamkiss/webpack-caddy-proxy": "~0.1.0",
     "bootstrap": "~4.0.0",
     "include-media-mq": "~1.0.0",
