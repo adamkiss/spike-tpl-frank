@@ -16,4 +16,5 @@ exports.configure = [
 
 exports.after = async (utils, config) => {
   await utils.target.exec('mkdir -p logs')
+  await utils.target.exec('npm install')
 }
