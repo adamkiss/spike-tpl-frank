@@ -1,6 +1,6 @@
 {
   "name": "spike-tpl-frank",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "My personal template for Spike.",
   "main": "init.js",
   "devDependencies": {
