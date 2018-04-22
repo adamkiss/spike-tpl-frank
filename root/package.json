@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "<%= author %>",
   "dependencies": {
-    "@adamkiss/spike-frank": "~0.4.8",
+    "@adamkiss/spike-frank": "~0.5.0",
     "@adamkiss/webpack-caddy-proxy": "~0.1.0",
     "bootstrap": "~4.0.0",
     "include-media-mq": "~1.0.0",
@@ -32,7 +32,9 @@
     "rules": {
       "generator-star-spacing": 0,
       "capitalized-comments": 0,
-      "require-yield": 0
+      "require-yield": 0,
+      "func-names": 0,
+      "curly": ["error", "multi", "consistent"]
     }
   }
 }

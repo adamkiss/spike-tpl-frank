@@ -1,7 +1,7 @@
 const frank = require('@adamkiss/spike-frank')
 const WebpackCaddyProxy = require('@adamkiss/webpack-caddy-proxy')
 
-const caddy = new WebpackCaddyProxy({port: 2224, caddyfile: 'Caddyfile'})
+const caddy = new WebpackCaddyProxy({port: 2220, caddyfile: 'Caddyfile'})
 const locals = {}
 
 module.exports = frank({

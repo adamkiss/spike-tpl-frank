@@ -14,6 +14,6 @@ exports.configure = [
   }
 ]
 
-exports.after = (util, config) => {
-  
+exports.after = (utils, config) => {
+  utils.target.cmd('mkdir logs')
 }

@@ -5,7 +5,5 @@ localhost {
   log logs/Caddy.access.log
   errors logs/Caddy.error.log
 
-  on startup php71-fpm start
-  on shutdown php71-fpm stop
   fastcgi / 127.0.0.1:9000 php
 }
