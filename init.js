@@ -14,6 +14,6 @@ exports.configure = [
   }
 ]
 
-exports.after = (utils, config) => {
-  utils.target.cmd('mkdir logs')
+exports.after = async (utils, config) => {
+  await utils.target.exec('mkdir -p logs')
 }
