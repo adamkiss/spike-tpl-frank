@@ -1,17 +1,20 @@
 const frank = require('@adamkiss/spike-frank')
-const WebpackCaddyProxy = require('@adamkiss/webpack-caddy-proxy')
-
-const caddy = new WebpackCaddyProxy({port: 2220, caddyfile: 'Caddyfile'})
 const locals = {}
 
 module.exports = frank({
 	ignore: ['include/**', 'logs/**'],
-	plugins: [caddy],
+	plugins: [],
 	reshape: frank.reshape({
 		root: __dirname,
 		locals: ctx => Object.assign(locals, {
 			page: frank.page(ctx)
 		})
 	}),
-	server: caddy.browserSyncProxy()
+	server: {
+		server: false,
+		https: false,
+		port: 2226,
+		proxy: `http://REPLACETHIS`,
+		notify: true
+	}
 })

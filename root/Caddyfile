@@ -1,9 +1,0 @@
-localhost {
-  tls self_signed
-
-  root public
-  log logs/Caddy.access.log
-  errors logs/Caddy.error.log
-
-  fastcgi / 127.0.0.1:9000 php
-}

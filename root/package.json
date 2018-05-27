@@ -8,8 +8,7 @@
     "include-media-mq": "~1.0.0"
   },
   "devDependencies": {
-    "@adamkiss/spike-frank": "~0.5.0",
-    "@adamkiss/webpack-caddy-proxy": "~0.1.0",
+    "@adamkiss/spike-frank": "~0.5.1",
     "eslint": "~4.19.1",
     "node-sass": "~4.8.3",
     "sass-loader": "~6.0.7",
@@ -24,8 +23,8 @@
   "scripts": {
     "deploy": "rsync -vurz -e 'ssh -p 22' --exclude='.*.php' --include='include' --include='include/**' --include='public' --include='public/**' --exclude='*' --exclude='include/**/.*' ./ <%= server %>",
     "deploy-dry": "rsync --dry-run -vvurz -e 'ssh -p 22'  --exclude='.*.php' --include='include' --include='include/**' --include='public' --include='public/**' --exclude='*' ./ <%= server %>",
-    "prod": "NODE_ENV=production spike clean && spike compile -e production && npm run deploy",
-    "prod-dry": "NODE_ENV=production spike clean && spike compile -e production && npm run deploy-dry"
+    "deploy-ci": "rsync -vurz -e 'ssh -o StrictHostKeychecking=no -p 22' --exclude='.*.php' --include='include' --include='include/**' --include='public' --include='public/**' --exclude='*' --exclude='include/**/.*' ./ <%= server %>",
+    "prod": "NODE_ENV=production spike clean && spike compile -e production"
   },
   "xo": {
     "semicolon": false,
