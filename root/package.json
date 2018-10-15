@@ -24,7 +24,8 @@
     "deploy": "rsync -vurz -e 'ssh -p 22' --exclude='.*.php' --include='include' --include='include/**' --include='public' --include='public/**' --exclude='*' --exclude='include/**/.*' ./_dist/ <%= server %>",
     "deploy-dry": "rsync --dry-run -vvurz -e 'ssh -p 22'  --exclude='.*.php' --include='include' --include='include/**' --include='public' --include='public/**' --exclude='*' ./_dist/ <%= server %>",
     "deploy-ci": "rsync -vurz -e 'ssh -o StrictHostKeychecking=no -p 22' --exclude='.*.php' --include='include' --include='include/**' --include='public' --include='public/**' --exclude='*' --exclude='include/**/.*' ./_dist/ <%= server %>",
-    "prod": "NODE_ENV=production spike clean && spike compile -e production"
+    "prod": "NODE_ENV=production spike clean && spike compile -e production",
+    "dev": "watchexec -w data -w partials -w _dist/include -e js,json,php -v -r spike watch"
   },
   "xo": {
     "semicolon": false,
