@@ -8,7 +8,7 @@
     "include-media-mq": "~1.0.0"
   },
   "devDependencies": {
-    "@adamkiss/spike-frank": "~0.5.1",
+    "@adamkiss/spike-frank": "~0.6.0",
     "eslint": "~4.19.1",
     "node-sass": "~4.8.3",
     "sass-loader": "~6.0.7",
@@ -21,9 +21,9 @@
   "main": "app.js",
   "private": true,
   "scripts": {
-    "deploy": "rsync -vurz -e 'ssh -p 22' --exclude='.*.php' --include='include' --include='include/**' --include='public' --include='public/**' --exclude='*' --exclude='include/**/.*' ./ <%= server %>",
-    "deploy-dry": "rsync --dry-run -vvurz -e 'ssh -p 22'  --exclude='.*.php' --include='include' --include='include/**' --include='public' --include='public/**' --exclude='*' ./ <%= server %>",
-    "deploy-ci": "rsync -vurz -e 'ssh -o StrictHostKeychecking=no -p 22' --exclude='.*.php' --include='include' --include='include/**' --include='public' --include='public/**' --exclude='*' --exclude='include/**/.*' ./ <%= server %>",
+    "deploy": "rsync -vurz -e 'ssh -p 22' --exclude='.*.php' --include='include' --include='include/**' --include='public' --include='public/**' --exclude='*' --exclude='include/**/.*' ./_dist/ <%= server %>",
+    "deploy-dry": "rsync --dry-run -vvurz -e 'ssh -p 22'  --exclude='.*.php' --include='include' --include='include/**' --include='public' --include='public/**' --exclude='*' ./_dist/ <%= server %>",
+    "deploy-ci": "rsync -vurz -e 'ssh -o StrictHostKeychecking=no -p 22' --exclude='.*.php' --include='include' --include='include/**' --include='public' --include='public/**' --exclude='*' --exclude='include/**/.*' ./_dist/ <%= server %>",
     "prod": "NODE_ENV=production spike clean && spike compile -e production"
   },
   "xo": {

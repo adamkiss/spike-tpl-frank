@@ -1,8 +1,9 @@
 const frank = require('@adamkiss/spike-frank')
+
 const locals = {}
 
 module.exports = frank({
-	ignore: ['include/**', 'logs/**'],
+	ignore: ['include/**', 'logs/**', '_dist/**'],
 	plugins: [],
 	reshape: frank.reshape({
 		root: __dirname,
